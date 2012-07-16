@@ -21,6 +21,7 @@
 
 @interface ModelController()
 @property (readonly, strong, nonatomic) NSArray *pageData;
+-(id)getPages;
 @end
 
 @implementation ModelController
@@ -32,10 +33,28 @@
     self = [super init];
     if (self) {
         // Create the data model.
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        _pageData = [[dateFormatter monthSymbols] copy];
+//        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//        _pageData = [[dateFormatter monthSymbols] copy];
+        _pageData = [self getPages];
     }
     return self;
+}
+-(id)getPages
+{
+    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/weddings.json"];
+    
+    NSData *jsonData = [NSData dataWithContentsOfURL:url];
+    
+    
+    if(jsonData != nil)
+    {
+        NSError *error = nil;
+        id result = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+        if (error == nil)
+            NSLog(@"%@", result);
+        return result;
+    }
+    return NULL;
 }
 
 - (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard
@@ -47,7 +66,7 @@
     
     // Create a new view controller and pass suitable data.
     DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
-    dataViewController.dataObject = [self.pageData objectAtIndex:index];
+    dataViewController.dataObject = self.pageData;
     return dataViewController;
 }
 

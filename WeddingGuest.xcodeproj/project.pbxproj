@@ -22,6 +22,7 @@
 		6963D52E15B311B6008D6ECA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6963D50915B311B6008D6ECA /* Foundation.framework */; };
 		6963D53615B311B6008D6ECA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6963D53415B311B6008D6ECA /* InfoPlist.strings */; };
 		6963D53915B311B6008D6ECA /* WeddingGuestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6963D53815B311B6008D6ECA /* WeddingGuestTests.m */; };
+		6963D54315B32790008D6ECA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6963D54215B32790008D6ECA /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,25 +40,26 @@
 		6963D50715B311B6008D6ECA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6963D50915B311B6008D6ECA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6963D50B15B311B6008D6ECA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6963D50F15B311B6008D6ECA /* WeddingGuest-Info.plist */ = {isa = PBXFileReference; path = "WeddingGuest-Info.plist"; sourceTree = "<group>"; };
+		6963D50F15B311B6008D6ECA /* WeddingGuest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeddingGuest-Info.plist"; sourceTree = "<group>"; };
 		6963D51115B311B6008D6ECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6963D51315B311B6008D6ECA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6963D51515B311B6008D6ECA /* WeddingGuest-Prefix.pch */ = {isa = PBXFileReference; path = "WeddingGuest-Prefix.pch"; sourceTree = "<group>"; };
-		6963D51615B311B6008D6ECA /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		6963D51515B311B6008D6ECA /* WeddingGuest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeddingGuest-Prefix.pch"; sourceTree = "<group>"; };
+		6963D51615B311B6008D6ECA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6963D51715B311B6008D6ECA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6963D51915B311B6008D6ECA /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		6963D51915B311B6008D6ECA /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		6963D51A15B311B6008D6ECA /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		6963D51C15B311B6008D6ECA /* DataViewController.h */ = {isa = PBXFileReference; path = DataViewController.h; sourceTree = "<group>"; };
+		6963D51C15B311B6008D6ECA /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
 		6963D51D15B311B6008D6ECA /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
-		6963D51F15B311B6008D6ECA /* ModelController.h */ = {isa = PBXFileReference; path = ModelController.h; sourceTree = "<group>"; };
+		6963D51F15B311B6008D6ECA /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
 		6963D52015B311B6008D6ECA /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
 		6963D52315B311B6008D6ECA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		6963D52A15B311B6008D6ECA /* WeddingGuestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeddingGuestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6963D52B15B311B6008D6ECA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		6963D53315B311B6008D6ECA /* WeddingGuestTests-Info.plist */ = {isa = PBXFileReference; path = "WeddingGuestTests-Info.plist"; sourceTree = "<group>"; };
+		6963D53315B311B6008D6ECA /* WeddingGuestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeddingGuestTests-Info.plist"; sourceTree = "<group>"; };
 		6963D53515B311B6008D6ECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6963D53715B311B6008D6ECA /* WeddingGuestTests.h */ = {isa = PBXFileReference; path = WeddingGuestTests.h; sourceTree = "<group>"; };
+		6963D53715B311B6008D6ECA /* WeddingGuestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeddingGuestTests.h; sourceTree = "<group>"; };
 		6963D53815B311B6008D6ECA /* WeddingGuestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeddingGuestTests.m; sourceTree = "<group>"; };
+		6963D54215B32790008D6ECA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		6963D4F815B311B5008D6ECA = {
 			isa = PBXGroup;
 			children = (
+				6963D54215B32790008D6ECA /* Default.png */,
 				6963D50D15B311B6008D6ECA /* WeddingGuest */,
 				6963D53115B311B6008D6ECA /* WeddingGuestTests */,
 				6963D50615B311B6008D6ECA /* Frameworks */,
@@ -234,6 +237,7 @@
 			files = (
 				6963D51215B311B6008D6ECA /* InfoPlist.strings in Resources */,
 				6963D52415B311B6008D6ECA /* MainStoryboard.storyboard in Resources */,
+				6963D54315B32790008D6ECA /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
