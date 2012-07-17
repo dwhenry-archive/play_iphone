@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Wedding.h"
 
 @interface DataViewController : UIViewController
-
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic) id dataObject;
 

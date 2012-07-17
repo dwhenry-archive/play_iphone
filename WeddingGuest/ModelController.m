@@ -21,12 +21,14 @@
 
 @interface ModelController()
 @property (readonly, strong, nonatomic) NSArray *pageData;
--(id)getPages;
+@property (readonly, strong, nonatomic) NSArray *weddingList;
+-(id)getWeddingList;
 @end
 
 @implementation ModelController
 
 @synthesize pageData = _pageData;
+@synthesize weddingList = _weddingList;
 
 - (id)init
 {
@@ -35,38 +37,41 @@
         // Create the data model.
 //        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 //        _pageData = [[dateFormatter monthSymbols] copy];
-        _pageData = [self getPages];
+        _weddingList = [self getWeddingList];
     }
     return self;
 }
--(id)getPages
+-(id)getWeddingList
 {
     NSURL *url = [NSURL URLWithString:@"http://localhost:3000/weddings.json"];
     
     NSData *jsonData = [NSData dataWithContentsOfURL:url];
     
-    
+    id result;
     if(jsonData != nil)
     {
         NSError *error = nil;
-        id result = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+        result = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
         if (error == nil)
             NSLog(@"%@", result);
-        return result;
+        else
+            NSLog(@"%@", error);
+    } else {
+        result = [[NSArray alloc] init];
     }
-    return NULL;
+    return [Wedding build:result];
 }
 
 - (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard
 {   
-    // Return the data view controller for the given index.
-    if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
-        return nil;
-    }
+//    // Return the data view controller for the given index.
+//    if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
+//        return nil;
+//    }
     
     // Create a new view controller and pass suitable data.
     DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
-    dataViewController.dataObject = self.pageData;
+    dataViewController.dataObject = self.weddingList;
     return dataViewController;
 }
 
@@ -74,7 +79,7 @@
 {   
      // Return the index of the given data view controller.
      // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
-    return [self.pageData indexOfObject:viewController.dataObject];
+    return [self.weddingList indexOfObject:viewController.dataObject];
 }
 
 #pragma mark - Page View Controller Data Source

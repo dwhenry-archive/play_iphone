@@ -23,6 +23,8 @@
 		6963D53615B311B6008D6ECA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6963D53415B311B6008D6ECA /* InfoPlist.strings */; };
 		6963D53915B311B6008D6ECA /* WeddingGuestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6963D53815B311B6008D6ECA /* WeddingGuestTests.m */; };
 		6963D54315B32790008D6ECA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6963D54215B32790008D6ECA /* Default.png */; };
+		696DD65E15B4924100A4E295 /* Wedding.m in Sources */ = {isa = PBXBuildFile; fileRef = 696DD65D15B4924100A4E295 /* Wedding.m */; };
+		69FAE4D115B591DA00986DEB /* UIViewWithBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 69FAE4D015B591DA00986DEB /* UIViewWithBorder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		6963D53715B311B6008D6ECA /* WeddingGuestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeddingGuestTests.h; sourceTree = "<group>"; };
 		6963D53815B311B6008D6ECA /* WeddingGuestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeddingGuestTests.m; sourceTree = "<group>"; };
 		6963D54215B32790008D6ECA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		696DD65C15B4924100A4E295 /* Wedding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wedding.h; path = models/Wedding.h; sourceTree = "<group>"; };
+		696DD65D15B4924100A4E295 /* Wedding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Wedding.m; path = models/Wedding.m; sourceTree = "<group>"; };
+		69FAE4CF15B591DA00986DEB /* UIViewWithBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIViewWithBorder.h; path = views/UIViewWithBorder.h; sourceTree = "<group>"; };
+		69FAE4D015B591DA00986DEB /* UIViewWithBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIViewWithBorder.m; path = views/UIViewWithBorder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,8 @@
 		6963D50D15B311B6008D6ECA /* WeddingGuest */ = {
 			isa = PBXGroup;
 			children = (
+				69FAE4CD15B591A600986DEB /* views */,
+				696DD65A15B491F800A4E295 /* models */,
 				6963D51615B311B6008D6ECA /* AppDelegate.h */,
 				6963D51715B311B6008D6ECA /* AppDelegate.m */,
 				6963D51915B311B6008D6ECA /* RootViewController.h */,
@@ -162,6 +170,24 @@
 				6963D53415B311B6008D6ECA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		696DD65A15B491F800A4E295 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				696DD65C15B4924100A4E295 /* Wedding.h */,
+				696DD65D15B4924100A4E295 /* Wedding.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		69FAE4CD15B591A600986DEB /* views */ = {
+			isa = PBXGroup;
+			children = (
+				69FAE4CF15B591DA00986DEB /* UIViewWithBorder.h */,
+				69FAE4D015B591DA00986DEB /* UIViewWithBorder.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +303,8 @@
 				6963D51B15B311B6008D6ECA /* RootViewController.m in Sources */,
 				6963D51E15B311B6008D6ECA /* DataViewController.m in Sources */,
 				6963D52115B311B6008D6ECA /* ModelController.m in Sources */,
+				696DD65E15B4924100A4E295 /* Wedding.m in Sources */,
+				69FAE4D115B591DA00986DEB /* UIViewWithBorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +474,7 @@
 				6963D53E15B311B6008D6ECA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6963D53F15B311B6008D6ECA /* Build configuration list for PBXNativeTarget "WeddingGuestTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +483,7 @@
 				6963D54115B311B6008D6ECA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

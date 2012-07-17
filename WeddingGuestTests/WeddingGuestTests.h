@@ -7,6 +7,7 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+//#import "Wedding.h"
 
 @interface WeddingGuestTests : SenTestCase
 

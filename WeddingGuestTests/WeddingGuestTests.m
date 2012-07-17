@@ -24,9 +24,18 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testWeddingObjectCreatorWithSingleElement
 {
     STFail(@"Unit tests are not implemented yet in WeddingGuestTests");
+//    NSArray *keys = [NSArray arrayWithObjects:@"key1", @"key2", @"key3", nil];
+//    NSArray *objects = [NSArray arrayWithObjects:@"How", @"are", @"you", nil];
+//    
+//    NSDictionary *dic1 = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+//    
+//    
+//    NSArray *items = [[NSArray alloc] initWithObjects:dic1, nil];
+        
+//    [[Wedding alloc] b
 }
 
 @end

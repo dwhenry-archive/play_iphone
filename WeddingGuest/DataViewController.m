@@ -7,9 +7,11 @@
 //
 
 #import "DataViewController.h"
+#import "views/UIViewWithBorder.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface DataViewController ()
--(void)addButton:(NSDictionary*)details top:(int)top;
+-(void)addButton:(Wedding*)details top:(int)top;
 -(void)addNewWeddingButton:(int)top;
 -(void)nothing;
 @end
@@ -40,72 +42,48 @@
     NSArray *detailsArray = self.dataObject;
     
     int top = 60;
-    for (NSDictionary *details in detailsArray) {
+    for (Wedding *details in detailsArray) {
         [self addButton:details top:top];
-        top = top + 50;
+        top = top + 60;
     }
     
     [self addNewWeddingButton:top];
 }
-
 -(void)addNewWeddingButton:(int)top 
 {
     
 }
--(void)addButton:(NSDictionary*)details top:(int)top
+-(void)clickWedding
 {
-
-    CGRect  viewRect = CGRectMake(40, top, 240, 40);
-    CGRect  weddingRect = CGRectMake(40, 0, 200, 20);
-    CGRect  dateRect = CGRectMake(40, 20, 200, 20);
-
-    UIView *view = [[UIView alloc] initWithFrame:viewRect];
+    NSLog(@"button click");
+}
+-(void)addButton:(Wedding*)details top:(int)top
+{
+    CGRect    viewRect = CGRectMake(35, top, 250, 50);
+    CGRect weddingRect = CGRectMake(50, 5, 195, 20);
+    CGRect    dateRect = CGRectMake(50, 25, 195, 20);
+    CGRect   imageRect = CGRectMake(3, 3, 40, 40);
     
+    UIViewWithBorder *view = [[UIViewWithBorder alloc] initWithFrame:viewRect];
+    
+    [view addTouchUpEvent:self action:@selector(clickWedding)];
     UILabel *weddingLabel = [[UILabel alloc] initWithFrame:weddingRect];
-    weddingLabel.text = [details objectForKey:@"wedding"];
+    weddingLabel.text = [details wedding];
     [view addSubview:weddingLabel];
 
     UILabel *dateLabel = [[UILabel alloc] initWithFrame:dateRect];;
-    dateLabel.text = [details objectForKey:@"date"];
+    dateLabel.text = [details dateLabel];
     dateLabel.font = [UIFont systemFontOfSize:12];
     [view addSubview:dateLabel];
 
-
-//    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: @"http://myurl/mypic.jpg"]];
-    UIImage *myImage = [UIImage imageWithData: [details objectForKey:@"image"]];
-
-    UIImageView *myImageView = [[UIImageView alloc] initWithImage:myImage];
-    
-    [myImageView setFrame:CGRectMake(0, 0, 40, 40)];
-    
+    UIImageView *myImageView = [[UIImageView alloc] initWithImage:[details image]];
+    [myImageView setFrame:imageRect];
+    myImageView.layer.cornerRadius = 5;
+    //    view.clipsToBounds = YES;
+    myImageView.layer.masksToBounds = YES;
     [view addSubview:myImageView];
 
-//    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: @"http://myurl/mypic.jpg"]];
-//    cell.image = [UIImage imageWithData: imageData];
-//    [imageData release];
-
     [self.view addSubview:view];
-}
-- (UIImage *)imageFromURLString:(NSString *)urlString 
-{
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod:@"GET"];
-    
-    NSURLResponse *response = nil;
-    NSError *error = nil;
-    NSData *result = [NSURLConnection sendSynchronousRequest:request          
-                                           returningResponse:&response error:&error];
-//    [self handleError:error];
-    UIImage *resultImage = [UIImage imageWithData:(NSData *)result];
-    
-    NSLog(@"urlString: %@",urlString);
-    return resultImage;
-}
-// method that dos nothing.. :)
--(void)nothing
-{
-    
 }
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
