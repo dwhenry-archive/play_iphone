@@ -13,7 +13,6 @@
 @interface DataViewController ()
 -(void)addButton:(Wedding*)details top:(int)top;
 -(void)addNewWeddingButton:(int)top;
--(void)nothing;
 @end
 
 @implementation DataViewController
